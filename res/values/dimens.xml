@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_padding">16dp</dimen>
+	<dimen name="list_row_padding">12dp</dimen>
+    <dimen name="imageview_padding">10dp</dimen>
+    <dimen name="imageview_padding_right">10dp</dimen>
+	<dimen name="imageview_size">50dp</dimen>
+    <dimen name="conversation_imageview_size">43dp</dimen>
+    <dimen name="shortcut_image_size">47dp</dimen>
+	<dimen name="conversation_text_size">12sp</dimen>
+	<dimen name="picker_row_padding">12dp</dimen>
+    <dimen name="thumbnail_padding">8dp</dimen>
+    <dimen name="thumbnail_padding_right">10dp</dimen>
+	<dimen name="thumbnail_size">44dp</dimen>
+    <dimen name="pref_profile_photo_size">192dp</dimen>
+    <dimen name="registration_profile_photo_size">96dp</dimen>
+    	
+	<dimen name="conversations_row_height">67dp</dimen>
+	<dimen name="group_participant_row_height">62dp</dimen>
+	
+	<dimen name="shared_contact_title_text_size">20sp</dimen>
+	<dimen name="shared_contact_content_text_size">14sp</dimen>
+	
+    <dimen name="header_height">48.7dp</dimen>
+    <dimen name="header_image_btn_width">52dp</dimen>
+	<dimen name="conversation_row_padding">6dp</dimen>
+    <dimen name="conversation_text_row_tv">16sp</dimen>
+    <dimen name="conversation_date_size">12sp</dimen>
+    <dimen name="conversation_participant_name_tv">12.5sp</dimen>
+	<dimen name="conversation_row_min_height">38dp</dimen>
+    <dimen name="conversation_row_min_height_collapse_body">30dp</dimen>
+    <dimen name="conversation_row_min_height_collapse_bottom">35dp</dimen>
+	<dimen name="conversation_contact_button_width">200dp</dimen>
+    <dimen name="conversation_divider_row_tv">12sp</dimen>
+    <dimen name="conversation_row_margin">11dp</dimen>
+    <dimen name="conversation_left_row_margin_right">24dp</dimen>
+    <dimen name="conversation_collapsed_row_margin_right">28dp</dimen>
+    <dimen name="conversation_date_divider_marginbottom">10dp</dimen>
+    <dimen name="autocomplete_text_size">16sp</dimen>
+    <dimen name="emoji_panel_margin_top">32dp</dimen>
+	
+	<dimen name="contactpicker_help_row_height">62dp</dimen>
+	<dimen name="contact_picker_type_max_width">120dp</dimen>
+	
+    <dimen name="quickaction_button_h">94dp</dimen>
+    <dimen name="quickaction_button_v">84dp</dimen>
+  
+    <dimen name="emoji_grouping_btn_width">51dp</dimen>
+    
+    <dimen name="account_info_btn_height">46dp</dimen>
+    
+    <dimen name="contact_list_padding_left">0dp</dimen>
+    <dimen name="contact_list_padding_right">0dp</dimen>
+
+    <dimen name="media_message_thumb">88dp</dimen>
+    <dimen name="contact_message_picture">68dp</dimen>
+    <dimen name="conversation_control_button_width">168dp</dimen>
+    
+</resources>

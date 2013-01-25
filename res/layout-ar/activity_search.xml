@@ -1,0 +1,92 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/background">
+  <ImageView 
+      android:background="@drawable/actionbar_background"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentRight="true"
+      android:id="@+id/actionbar"/>
+      <TextView 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/contact_us"
+          android:textColor="#FFFFFF"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          android:paddingRight="10dp"
+          android:paddingTop="10dp"
+          android:layout_alignParentRight="true"/>
+
+      <Button
+          android:id="@+id/bDone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/button_disabled"
+          android:layout_margin="7dp"
+          android:layout_alignParentLeft="true"
+          android:drawablePadding="10dp"
+          android:gravity="center_vertical|center_horizontal"
+          android:paddingBottom="1dp"
+          android:paddingLeft="20dp"
+          android:paddingRight="20dp"
+          android:paddingTop="1dp"
+          android:text="@string/done"
+          android:textColor="#FFFFFF"
+          android:textStyle="bold" />
+	  
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="6dp"
+      android:paddingLeft="@dimen/horizontal_padding"
+      android:paddingRight="@dimen/horizontal_padding"
+      android:layout_below="@id/actionbar">
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/describe_problem_description_et"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:hint="@string/describe_problem_description"
+            android:imeOptions="actionDone"
+            android:inputType="textLongMessage"
+            android:lines="4"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarDefaultDelayBeforeFade="200"
+            android:scrollbarFadeDuration="300"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:selectAllOnFocus="true"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+      </LinearLayout>
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp">
+        <Button
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"
+          android:layout_gravity="center_horizontal|center_vertical"
+          android:id="@+id/describe_problem_help"
+          android:text="@string/faq"
+          android:textStyle="bold" />
+      </LinearLayout>
+
+      <View
+        android:layout_width="fill_parent"
+        android:layout_height="16dp" />
+    </LinearLayout>
+</RelativeLayout>

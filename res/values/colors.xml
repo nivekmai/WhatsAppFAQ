@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="background">#ffffff</color>
+<color name="black">#000000</color>
+<color name="light_gray">#dddddd</color>
+<color name="dark_gray">#6F6F6F</color>
+<color name="listview_large_bold">#000000</color>
+<color name="conversations_text_gray">#7b7b7b</color>
+<color name="divider_gray">#C0C4C0</color>
+<color name="group_divider_gray">#C0C4C0</color>
+<color name="light_blue">#95CBE9</color>
+<color name="conversation_background">#e8ecf3</color>
+<color name="contact_phone_type">#80000000</color>
+<color name="light_blue_conversationrow">#f2f6ff</color>
+<color name="white">#ffffff</color>
+<color name="emoji_flipper_translucent_black">#99000000</color>
+<color name="quick_action_translucent_black">#bb2b2b2b</color>
+<color name="emoji_group_selected_black">#bb121212</color>
+<color name="emoji_group_translucent_black">#dd3b3b3b</color>
+<color name="emoji_popup_header">#2B2B2B</color>
+<color name="emoji_popup_body">#363636</color>
+<color name="notice_text">#517CD3</color>
+<color name="group_chat_info_gray">#F7F7F7</color>
+<color name="divider_row_lower">#cdcdcd</color>
+<color name="divider_row_upper">#ffffff</color>
+<color name="red">#8b0000</color>
+<color name="yellow">#efd700</color>
+<color name="green">#008000</color>
+<color name="countrypicker_blue">#4169e1</color>
+<color name="row_1">#f6f6f6</color>
+<color name="row_2">#e5e5e5</color>
+<color name="description_gray">#333333</color>
+<color name="search_text_highlight">#32AFFF</color>
+<color name="list_item_selected">#660099CC</color>
+</resources>
+
