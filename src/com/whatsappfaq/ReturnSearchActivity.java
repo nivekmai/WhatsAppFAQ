@@ -154,14 +154,13 @@ public class ReturnSearchActivity extends Activity {
 				JSONObject result = json.optJSONObject(i);
 				try {
 					if((i+1)%2 == 0) {
-						titleString[i] = "<body bgColor=\"#DDDDDD\">" +  result.getString("title") + "<hr />";
+						titleString[i] = "<body bgColor=\"#DDDDDD\"><h3><center>" +  result.getString("title") + "<hr /></center></h3>";
 						resultString[i] = result.getString("description") + "</body>";
 					}
 					else {
-						titleString[i] = result.getString("title") + "<hr />";
+						titleString[i] = "<center><h3>" + result.getString("title") + "<hr /></h3></center>";
 						resultString[i] = result.getString("description");
 					}
-					
 					linkString[i] = result.getString("url");
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block

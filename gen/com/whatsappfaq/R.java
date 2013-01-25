@@ -104,9 +104,10 @@ public final class R {
         public static final int actionbar=0x7f09000a;
         public static final int bDone=0x7f09000b;
         public static final int bNoMatch=0x7f090003;
+        public static final int bdescribe_problem_help=0x7f09000d;
         public static final int describe_problem_description_et=0x7f09000c;
-        public static final int describe_problem_help=0x7f09000d;
-        public static final int menu_settings=0x7f09000e;
+        public static final int describe_problem_help=0x7f09000e;
+        public static final int menu_settings=0x7f09000f;
         public static final int pbLoadingResult=0x7f090002;
         public static final int tvEmailText=0x7f090001;
         public static final int tvTryThis=0x7f090004;

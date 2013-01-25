@@ -79,7 +79,7 @@
           android:layout_height="wrap_content"
           android:layout_width="fill_parent"
           android:layout_gravity="center_horizontal|center_vertical"
-          android:id="@+id/describe_problem_help"
+          android:id="@+id/bdescribe_problem_help"
           android:text="@string/faq"
           android:textStyle="bold" />
       </LinearLayout>
