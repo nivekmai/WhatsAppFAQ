@@ -19,7 +19,7 @@
           android:textColor="#FFFFFF"
           android:textSize="20sp"
           android:textStyle="bold"
-          android:paddingLeft="10dp"
+          android:paddingLeft="16dp"
           android:paddingTop="10dp"/>
 
       <Button

@@ -50,7 +50,6 @@ public class SearchActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(whatsappFAQ));
 				startActivity(browserIntent);
 			}
