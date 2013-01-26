@@ -5,9 +5,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -25,14 +25,21 @@ public class SearchActivity extends Activity {
         final EditText searchBox = (EditText) findViewById(R.id.describe_problem_description_et);
         final Button searchButton = (Button) findViewById(R.id.bDone);
         final Button faqButton = (Button) findViewById(R.id.bdescribe_problem_help);
+        final CheckBox checkbox = (CheckBox) findViewById(R.id.checkBox1);
         
         searchButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				String description = searchBox.getText().toString();
-				Intent intent = new Intent(SearchActivity.this, ReturnSearchActivity.class);
 				if(description.length() >= 5){
+					Intent intent;
+					if(checkbox.isChecked()){
+						intent = new Intent(SearchActivity.this, ReturnSearchActivity.class);
+					}
+					else{
+						intent = new Intent(SearchActivity.this, ReturnSearchActivityAlternate.class);
+					}
 					intent.putExtra(SEARCH_MESSAGE, description);
 					startActivity(intent);
 				}

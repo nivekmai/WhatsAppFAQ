@@ -17,6 +17,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,7 +32,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class ReturnSearchActivity extends Activity {
+public class ReturnSearchActivityAlternate extends Activity {
 	
 	private final int resultsToLoad = 5;
 	public final static String SEARCH_MESSAGE = "com.whatsapp.MESSAGE";
@@ -39,9 +41,9 @@ public class ReturnSearchActivity extends Activity {
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Log.w("launch", "result");
+		Log.w("launch", "resultAlt");
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_return_search);
+		setContentView(R.layout.activity_return_search_activity_alternate);
 		
         //Find the language (ideally this would be done somewhere else);
         final String language = Locale.getDefault().getLanguage();
@@ -51,14 +53,14 @@ public class ReturnSearchActivity extends Activity {
         String description = fromIntent.getStringExtra(SearchActivity.SEARCH_MESSAGE);
         
         // Start up the spinner and make sure it's visible
-        final ProgressBar progresser = (ProgressBar) findViewById(R.id.pbLoadingResult);
+        final ProgressBar progresser = (ProgressBar) findViewById(R.id.pbLoadingResultAlt);
         progresser.setVisibility(View.VISIBLE);
         
         // Set up sending the description the user entered before we start making it safe to query with
         final String originalQuery = description;
         
         // Init the button
-        final Button noMatchButton = (Button) findViewById(R.id.bNoMatch);
+        final Button noMatchButton = (Button) findViewById(R.id.bNoMatchAlt);
         noMatchButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -71,12 +73,13 @@ public class ReturnSearchActivity extends Activity {
 					Toast toast = Toast.makeText(context, text, duration);
 					toast.show();
 				}
-				Intent emailIntent = new Intent(ReturnSearchActivity.this, EmailActivity.class);
+				Intent emailIntent = new Intent(ReturnSearchActivityAlternate.this, EmailActivity.class);
 				emailIntent.putExtra(SEARCH_MESSAGE, originalQuery);
 				startActivity(emailIntent);
 			}
 		});
 		
+        
         try {
 			description = URLEncoder.encode(description, "UTF-8"); //encode the search string to sanitize 
 		} catch (UnsupportedEncodingException e) {
@@ -112,7 +115,7 @@ public class ReturnSearchActivity extends Activity {
 							e.printStackTrace();
 						}
 						if (entries.length() == 0){
-							Intent emailIntent = new Intent(ReturnSearchActivity.this, EmailActivity.class);
+							Intent emailIntent = new Intent(ReturnSearchActivityAlternate.this, EmailActivity.class);
 							emailIntent.putExtra(SEARCH_MESSAGE, originalQuery);
 							startActivity(emailIntent);
 						}
@@ -131,7 +134,7 @@ public class ReturnSearchActivity extends Activity {
 	public void populateList(JSONArray json){
 		
 		/* TODO
-		 * Should figure out how to make a webview array, probably a custom list adapter, but it's not really worth it for only 5 webviews.
+		 * Should figure out how to make a button/webview array, probably a custom list adapter, but it's not really worth it for only 5 combos.
 		 * If we were to make it an expandable list and make the FAQ have a lot more content (avg. 10 results), it might be worth it.
 		 * Right now the average query result is <5.
 		 */
@@ -139,6 +142,7 @@ public class ReturnSearchActivity extends Activity {
 		if (json.length() == 0){
 			Context context = getApplicationContext();
 			CharSequence text = context.getString(R.string.no_matches);
+			context.getAssets();
 			int duration = Toast.LENGTH_LONG;
 
 			Toast toast = Toast.makeText(context, text, duration);
@@ -146,11 +150,17 @@ public class ReturnSearchActivity extends Activity {
 		}
 		
 		else {		
-			final WebView webview0 = (WebView) findViewById(R.id.wvResult0); 
-			WebView webview1 = (WebView) findViewById(R.id.wvResult1);
-			WebView webview2 = (WebView) findViewById(R.id.wvResult2);
-			WebView webview3 = (WebView) findViewById(R.id.wvResult3);
-			WebView webview4 = (WebView) findViewById(R.id.wvResult4);
+			final WebView webview0 = (WebView) findViewById(R.id.wvResult0Alt); 
+			final WebView webview1 = (WebView) findViewById(R.id.wvResult1Alt);
+			final WebView webview2 = (WebView) findViewById(R.id.wvResult2Alt);
+			final WebView webview3 = (WebView) findViewById(R.id.wvResult3Alt);
+			final WebView webview4 = (WebView) findViewById(R.id.wvResult4Alt);
+			final Button bResult0 = (Button) findViewById(R.id.bResult0);
+			final Button bResult1 = (Button) findViewById(R.id.bResult1);
+			final Button bResult2 = (Button) findViewById(R.id.bResult2);
+			final Button bResult3 = (Button) findViewById(R.id.bResult3);
+			final Button bResult4 = (Button) findViewById(R.id.bResult4);
+
 
 			//Log.i("array", json.toString());
 			String[] resultString = new String[resultsToLoad];
@@ -161,11 +171,11 @@ public class ReturnSearchActivity extends Activity {
 				JSONObject result = json.optJSONObject(i);
 				try {
 					if((i+1)%2 == 0) {
-						titleString[i] = "<body bgColor=\"#DDDDDD\">" +  result.getString("title").replaceAll("<b>|</b>", "");
+						titleString[i] = result.getString("title").replaceAll("<b>|</b>", "");
 						resultString[i] = result.getString("description") + "</body>";
 					}
 					else {
-						titleString[i] = result.getString("title").replaceAll("<b>", "");
+						titleString[i] = result.getString("title").replaceAll("<b>|</b>", "");
 						resultString[i] = result.getString("description");
 					}
 					linkString[i] = result.getString("url");
@@ -181,14 +191,105 @@ public class ReturnSearchActivity extends Activity {
 					linkString[i] = "#";
 				}
 			}
-			
+			if(resultString[4] == null){  //hide buttons if there's less than 5 results
+				bResult4.setVisibility(View.GONE);
+				if(resultString[3] == null){
+					bResult3.setVisibility(View.GONE);
+					if(resultString[2] == null){
+						bResult2.setVisibility(View.GONE);
+						if(resultString[1] == null){
+							bResult1.setVisibility(View.GONE);
+						}
+					}
+				}
+			}
+			//Log.i("titlestring", titleString[0]);
+			bResult0.setText(titleString[0]);
+			bResult1.setText(titleString[1]);
+			bResult2.setText(titleString[2]);
+			bResult3.setText(titleString[3]);
+			bResult4.setText(titleString[4]);
 			webview0.loadData(resultString[0], "text/html", "UNICODE");
-			webview1.loadData(titleString[1] + resultString[1], "text/html", "UNICODE");
-			webview2.loadData(titleString[2] + resultString[2], "text/html", "UNICODE");
-			webview3.loadData(titleString[3] + resultString[3], "text/html", "UNICODE");
-			webview4.loadData(titleString[4] + resultString[4], "text/html", "UNICODE");
+			webview1.loadData(resultString[1], "text/html", "UNICODE");
+			webview2.loadData(resultString[2], "text/html", "UNICODE");
+			webview3.loadData(resultString[3], "text/html", "UNICODE");
+			webview4.loadData(resultString[4], "text/html", "UNICODE");
+						
+			final Drawable down = getResources().getDrawable(R.drawable.button_down);			
+			final Drawable up = getResources().getDrawable(R.drawable.button_up);
 			
-			webview0.setOnTouchListener(new View.OnTouchListener() { // I know it's ugly, see above todo
+			bResult0.setOnClickListener(new View.OnClickListener() { // I know it's ugly, see above todo
+				
+				@Override
+				public void onClick(View v) {
+					if(webview0.getVisibility() == View.GONE){
+						webview0.setVisibility(View.VISIBLE);
+						bResult0.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
+					}
+					else{
+						webview0.setVisibility(View.GONE);
+						bResult0.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
+					}
+				}
+			});
+			bResult1.setOnClickListener(new View.OnClickListener() {
+							
+				@Override
+				public void onClick(View v) {
+					if(webview1.getVisibility() == View.GONE){
+						webview1.setVisibility(View.VISIBLE);
+						bResult1.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
+					}
+					else{
+						webview1.setVisibility(View.GONE);
+						bResult1.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
+					}
+				}
+			});
+			bResult2.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					if(webview2.getVisibility() == View.GONE){
+						webview2.setVisibility(View.VISIBLE);
+						bResult2.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
+					}
+					else{
+						webview2.setVisibility(View.GONE);
+						bResult2.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
+					}
+				}
+			});
+			bResult3.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					if(webview3.getVisibility() == View.GONE){
+						webview3.setVisibility(View.VISIBLE);
+						bResult3.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
+					}
+					else{
+						webview3.setVisibility(View.GONE);
+						bResult3.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
+					}
+				}
+			});
+			bResult4.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					if(webview4.getVisibility() == View.GONE){
+						webview4.setVisibility(View.VISIBLE);
+						bResult4.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
+					}
+					else{
+						webview4.setVisibility(View.GONE);
+						bResult4.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
+					}
+				}
+			});
+			
+			webview0.setOnTouchListener(new View.OnTouchListener() { 
 				
 				@Override
 				public boolean onTouch(View arg0, MotionEvent event) {

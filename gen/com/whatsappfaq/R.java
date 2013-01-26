@@ -69,6 +69,7 @@ public final class R {
         public static final int conversation_text_row_tv=0x7f050015;
         public static final int conversation_text_size=0x7f050007;
         public static final int conversations_row_height=0x7f05000e;
+        public static final int dropdown_padding=0x7f05002e;
         public static final int emoji_grouping_btn_width=0x7f050027;
         public static final int emoji_panel_margin_top=0x7f050022;
         public static final int group_participant_row_height=0x7f05000f;
@@ -95,38 +96,58 @@ public final class R {
     public static final class drawable {
         public static final int actionbar_background=0x7f020000;
         public static final int button_disabled=0x7f020001;
-        public static final int button_search=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int orange_button=0x7f020004;
+        public static final int button_down=0x7f020002;
+        public static final int button_search=0x7f020003;
+        public static final int button_up=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int orange_button=0x7f020006;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;
-        public static final int actionbar=0x7f09000a;
-        public static final int bDone=0x7f09000b;
+        public static final int actionbar=0x7f090017;
+        public static final int bDone=0x7f090019;
         public static final int bNoMatch=0x7f090003;
-        public static final int bdescribe_problem_help=0x7f09000d;
-        public static final int describe_problem_description_et=0x7f09000c;
-        public static final int describe_problem_help=0x7f09000e;
-        public static final int menu_settings=0x7f09000f;
+        public static final int bNoMatchAlt=0x7f09000b;
+        public static final int bResult0=0x7f09000d;
+        public static final int bResult1=0x7f09000f;
+        public static final int bResult2=0x7f090011;
+        public static final int bResult3=0x7f090013;
+        public static final int bResult4=0x7f090015;
+        public static final int bdescribe_problem_help=0x7f09001c;
+        public static final int checkBox1=0x7f09001d;
+        public static final int describe_problem_description_et=0x7f09001b;
+        public static final int describe_problem_help=0x7f09001e;
+        public static final int linearLayout1=0x7f09001a;
+        public static final int menu_settings=0x7f09001f;
         public static final int pbLoadingResult=0x7f090002;
+        public static final int pbLoadingResultAlt=0x7f09000a;
+        public static final int textView1=0x7f090018;
         public static final int tvEmailText=0x7f090001;
         public static final int tvTryThis=0x7f090004;
+        public static final int tvTryThisAlt=0x7f09000c;
         public static final int wvResult0=0x7f090005;
+        public static final int wvResult0Alt=0x7f09000e;
         public static final int wvResult1=0x7f090006;
+        public static final int wvResult1Alt=0x7f090010;
         public static final int wvResult2=0x7f090007;
+        public static final int wvResult2Alt=0x7f090012;
         public static final int wvResult3=0x7f090008;
+        public static final int wvResult3Alt=0x7f090014;
         public static final int wvResult4=0x7f090009;
+        public static final int wvResult4Alt=0x7f090016;
     }
     public static final class layout {
         public static final int activity_email=0x7f030000;
         public static final int activity_return_search=0x7f030001;
-        public static final int activity_search=0x7f030002;
+        public static final int activity_return_search_activity_alternate=0x7f030002;
+        public static final int activity_search=0x7f030003;
     }
     public static final class menu {
         public static final int activity_email=0x7f080000;
         public static final int activity_return_search=0x7f080001;
-        public static final int activity_search=0x7f080002;
-        public static final int activity_testactivity=0x7f080003;
+        public static final int activity_return_search_activity_alternate=0x7f080002;
+        public static final int activity_search=0x7f080003;
+        public static final int activity_testactivity=0x7f080004;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
@@ -142,6 +163,7 @@ public final class R {
         public static final int not_long_enough=0x7f06000e;
         public static final int search_for=0x7f060004;
         public static final int title_activity_email=0x7f060006;
+        public static final int title_activity_return_search_activity_alternate=0x7f06000f;
         public static final int title_activity_testactivity=0x7f060005;
         public static final int try_these_faq=0x7f060009;
     }
