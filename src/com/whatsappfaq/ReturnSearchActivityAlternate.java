@@ -46,7 +46,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 		
 	    final Intent fromIntent = getIntent();
 	    String description = fromIntent.getStringExtra(SearchActivity.SEARCH_MESSAGE);
-	    final int resultsToLoad = 9;
+	    final int resultsToLoad = 7;
 		
         //Find the language (ideally this would be done somewhere else);
         final String language = Locale.getDefault().getLanguage();
@@ -223,8 +223,8 @@ public class ReturnSearchActivityAlternate extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Log.i("question", question.toString());
-				Log.i("answer", answer.toString());
+//				Log.i("question", question.toString());
+//				Log.i("answer", answer.toString());
 				if(answer.getVisibility() == View.GONE){
 					answer.setVisibility(View.VISIBLE);
 					if(language=="ar"){						
