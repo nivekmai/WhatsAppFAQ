@@ -24,7 +24,7 @@
  		    android:textAllCaps="true"
  		    android:textColor="#FFFFFF"
  		    android:textSize="18sp"
- 		    android:drawableRight="@drawable/button_double_right_arrow"
+ 		    android:drawableLeft="@drawable/button_double_right_arrow"
  		    />
  		<TextView 
  		    android:id="@+id/tvTryThisAlt"
@@ -94,54 +94,6 @@
 		     	    	/>
 				<WebView 
 				       	android:id="@+id/wvResult4Alt"
-				       	style="@style/FAQAnswerTheme"
-				       />
-				<Button 
-		     	    	android:id="@+id/bResult5"
-						style="@style/FAQQuestionButtonTheme"
-		     	    	/>
-				<WebView 
-				       	android:id="@+id/wvResult5Alt"
-				       	style="@style/FAQAnswerTheme"
-				       />
-				<Button 
-		     	    	android:id="@+id/bResult6"
-						style="@style/FAQQuestionButtonTheme"
-		     	    	/>
-				<WebView 
-				       	android:id="@+id/wvResult6Alt"
-				       	style="@style/FAQAnswerTheme"
-				       />
-				<Button 
-		     	    	android:id="@+id/bResult7"
-						style="@style/FAQQuestionButtonTheme"
-		     	    	/>
-				<WebView 
-				       	android:id="@+id/wvResult7Alt"
-				       	style="@style/FAQAnswerTheme"
-				       />
-				<Button 
-		     	    	android:id="@+id/bResult8"
-						style="@style/FAQQuestionButtonTheme"
-		     	    	/>
-				<WebView 
-				       	android:id="@+id/wvResult8Alt"
-				       	style="@style/FAQAnswerTheme"
-				       />
-				<Button 
-		     	    	android:id="@+id/bResult9"
-						style="@style/FAQQuestionButtonTheme"
-		     	    	/>
-				<WebView 
-				       	android:id="@+id/wvResult9Alt"
-				       	style="@style/FAQAnswerTheme"
-				       />
-				<Button 
-		     	    	android:id="@+id/bResult10"
-						style="@style/FAQQuestionButtonTheme"
-		     	    	/>
-				<WebView 
-				       	android:id="@+id/wvResult10Alt"
 				       	style="@style/FAQAnswerTheme"
 				       />
  		</LinearLayout>

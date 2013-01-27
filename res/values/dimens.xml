@@ -55,6 +55,9 @@
     <dimen name="media_message_thumb">88dp</dimen>
     <dimen name="contact_message_picture">68dp</dimen>
     <dimen name="conversation_control_button_width">168dp</dimen>
+    
     <dimen name="dropdown_padding">10dp</dimen>
+    <dimen name="faq_button_text_size">20sp</dimen>
+    
     
 </resources>

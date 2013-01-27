@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="app_name">Preguntas más frecuentes</string>
+<string name="menu_settings">Configuración</string>
+<string name="describe_problem_description">Por favor describa su problema.</string>
+<string name="done">Hecho</string>
+<string name="search_for">Búsqueda por:</string>
+<string name="title_activity_email">EmailActivity</string>
+<string name="email_here">Jan no lee esto por favor:</string>
+<string name="does_not_match_button">Esto no responde a mi pregunta.</string>
+<string name="try_these_faq">¿Este es tu pregunta?</string>
+<string name="no_matches">Lo sentimos, parece que no hubo coincidencias Ayuda para tu pregunta. Por favor, envíenos un correo electrónico.</string>
+<string name="more_detail">Por favor, use tantos detalles como sea posible. Cuanto más nos dicen, más rápido podremos resolver el problema.</string>
+<string name="faq">¿Has leído nuestro FAQ todavía?</string>
+<string name="contact_us">Contáctenos</string>
+<string name="not_long_enough">Lo sentimos, no hay suficiente información para resolver el problema.</string>
+<string name="title_activity_return_search_activity_alternate">Contáctenos</string>
+
+</resources>
