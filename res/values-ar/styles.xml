@@ -22,9 +22,9 @@
         <item name = "android:layout_width">match_parent</item>
 		<item name = "android:layout_height">wrap_content</item>
 		<item name = "android:layout_weight">1</item>
-		<item name = "android:drawableLeft">@drawable/button_down</item>
+		<item name = "android:drawableRight">@drawable/button_down</item>
 		<item name = "android:drawablePadding">@dimen/dropdown_padding</item>
-		<item name = "android:gravity">left</item>
+		<item name = "android:gravity">right</item>
 		<item name = "android:visibility">gone</item>
 		<item name = "android:background">@drawable/faq_question_button</item>
 		<item name = "android:padding">5dp</item>

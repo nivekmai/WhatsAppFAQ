@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">	שאלות ותשובות	</string>
+    <string name="menu_settings">הגדרות</string>
+    <string name="describe_problem_description">אנא תאר את הבעיה שלך.</string>
+    <string name="done">עשה</string>
+    <string name="search_for">מחפש:</string>
+    <string name="title_activity_email">EmailActivity</string>
+    <string name="email_here">מסך דוא"ל יהיה כאן, עם שאילתא החיפוש שלך נכשלה כבר נכתבה ב:</string>
+    <string name="does_not_match_button">זה לא עונה לשאלה שלי.</string>
+    <string name="try_these_faq">האם זו השאלה שלך?</string>
+    <string name="no_matches">מצטער, זה נראה שאין התאמות שאלות ותשובות לשאלה שלך. אנא שלח לנו דוא"ל.</string>
+    <string name="more_detail">אנא השתמש בפרטים רבים ככל האפשר. ככל שאתה מספר לנו, מהר אנחנו יכולים לפתור את הבעיה שלך.</string>
+    <string name="faq">האם קראת את השאלות הנפוצות עדיין?</string>
+    <string name="contact_us">צור קשר</string>
+    <string name="not_long_enough">מצטער, זה לא מספיק מידע כדי לפתור את הבעיה.</string>
+    <string name="title_activity_return_search_activity_alternate">צור קשר</string>
+
+</resources>

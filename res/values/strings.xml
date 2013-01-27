@@ -6,15 +6,15 @@
     <string name="describe_problem_description">Please describe your problem.</string>
     <string name="done">Done</string>
     <string name="search_for">Searching for:</string>
-    <string name="title_activity_testactivity">Testactivity</string>
     <string name="title_activity_email">EmailActivity</string>
     <string name="email_here">Email screen would be here, with your failed search query already written in:</string>
     <string name="does_not_match_button">This does not answer my question.</string>
-    <string name="try_these_faq">Try these FAQ results to see if they answer your question:</string>
+    <string name="try_these_faq">Is this your question?</string>
     <string name="no_matches">Sorry, it seems there were no FAQ matches for your question. Please send us an email.</string>
     <string name="more_detail">Please use as much detail as possible. The more you tell us, the faster we can solve your issue.</string>
     <string name="faq">Have you read our FAQ yet?</string>
     <string name="contact_us">Contact us</string>
     <string name="not_long_enough">Sorry, that is not enough information to resolve your issue.</string>
+    <string name="title_activity_return_search_activity_alternate">Contact Us</string>
 
 </resources>
