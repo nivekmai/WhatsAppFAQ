@@ -20,7 +20,6 @@
  		    android:layout_alignParentLeft="true"
  		    android:layout_alignParentRight="true"
  		    android:text="@string/does_not_match_button"
- 		    android:background="@drawable/orange_button"
  		    android:layout_margin="5dp" 
  		    />
  		<TextView 

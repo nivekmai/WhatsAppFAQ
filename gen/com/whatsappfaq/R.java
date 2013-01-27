@@ -109,7 +109,7 @@ public final class R {
     public static final class id {
         public static final int LinearLayout1=0x7f090000;
         public static final int actionbar=0x7f090023;
-        public static final int bDone=0x7f090025;
+        public static final int bDone=0x7f090024;
         public static final int bNoMatch=0x7f090003;
         public static final int bNoMatchAlt=0x7f09000b;
         public static final int bResult0=0x7f09000d;
@@ -123,14 +123,14 @@ public final class R {
         public static final int bResult7=0x7f09001b;
         public static final int bResult8=0x7f09001d;
         public static final int bResult9=0x7f09001f;
-        public static final int bdescribe_problem_help=0x7f090028;
-        public static final int checkBox1=0x7f090029;
-        public static final int describe_problem_description_et=0x7f090027;
-        public static final int linearLayout1=0x7f090026;
+        public static final int bdescribe_problem_help=0x7f090027;
+        public static final int checkBox1=0x7f090028;
+        public static final int describe_problem_description_et=0x7f090026;
+        public static final int linearLayout1=0x7f090025;
         public static final int menu_settings=0x7f09002a;
         public static final int pbLoadingResult=0x7f090002;
         public static final int pbLoadingResultAlt=0x7f09000a;
-        public static final int textView1=0x7f090024;
+        public static final int textView1=0x7f090029;
         public static final int tvEmailText=0x7f090001;
         public static final int tvTryThis=0x7f090004;
         public static final int tvTryThisAlt=0x7f09000c;
