@@ -128,11 +128,10 @@ public final class R {
         public static final int checkBox1=0x7f0a0028;
         public static final int describe_problem_description_et=0x7f0a0026;
         public static final int linearLayout1=0x7f0a0025;
-        public static final int menu_settings=0x7f0a002b;
+        public static final int menu_settings=0x7f0a002a;
         public static final int pbLoadingResult=0x7f0a0002;
         public static final int pbLoadingResultAlt=0x7f0a000a;
         public static final int spinner1=0x7f0a0029;
-        public static final int textView1=0x7f0a002a;
         public static final int tvEmailText=0x7f0a0001;
         public static final int tvTryThis=0x7f0a0004;
         public static final int tvTryThisAlt=0x7f0a000c;
@@ -205,24 +204,15 @@ public final class R {
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
          */
         public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
         public static final int FAQAnswerTheme=0x7f080003;
+        public static final int FAQAnswerThemeAR=0x7f080005;
         public static final int FAQQuestionButtonTheme=0x7f080002;
+        public static final int FAQQuestionButtonThemeAR=0x7f080004;
     }
 }

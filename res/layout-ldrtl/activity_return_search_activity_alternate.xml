@@ -58,43 +58,91 @@
 		      >
 		     	<Button 
 		     	    	android:id="@+id/bResult0"
-		     	    	style="@style/FAQQuestionButtonTheme"
+		     	    	style="@style/FAQQuestionButtonThemeAR"
 		     	    	/>
 				<WebView 
 				       	android:id="@+id/wvResult0Alt"
-				       	style="@style/FAQAnswerTheme"
+				       	style="@style/FAQAnswerThemeAR"
 				       />
 				<Button 
 		     	    	android:id="@+id/bResult1"
-		     	    	style="@style/FAQQuestionButtonTheme"
+		     	    	style="@style/FAQQuestionButtonThemeAR"
 		     	    	/>
 				<WebView 
 				       	android:id="@+id/wvResult1Alt"
-				       	style="@style/FAQAnswerTheme"
+				       	style="@style/FAQAnswerThemeAR"
 				       />
 				<Button 
 		     	    	android:id="@+id/bResult2"
-		     	    	style="@style/FAQQuestionButtonTheme"
+		     	    	style="@style/FAQQuestionButtonThemeAR"
 		     	    	/>
 				<WebView 
 				       	android:id="@+id/wvResult2Alt"
-				       	style="@style/FAQAnswerTheme"
+				       	style="@style/FAQAnswerThemeAR"
 				       />
 				<Button 
 		     	    	android:id="@+id/bResult3"
-		     	    	style="@style/FAQQuestionButtonTheme"
+		     	    	style="@style/FAQQuestionButtonThemeAR"
 		     	    	/>
 				<WebView 
 				       	android:id="@+id/wvResult3Alt"
-				      	style="@style/FAQAnswerTheme"
+				      	style="@style/FAQAnswerThemeAR"
 				       />
 				<Button 
 		     	    	android:id="@+id/bResult4"
-						style="@style/FAQQuestionButtonTheme"
+						style="@style/FAQQuestionButtonThemeAR"
 		     	    	/>
 				<WebView 
 				       	android:id="@+id/wvResult4Alt"
-				       	style="@style/FAQAnswerTheme"
+				       	style="@style/FAQAnswerThemeAR"
+				       />
+				<Button 
+		     	    	android:id="@+id/bResult5"
+						style="@style/FAQQuestionButtonThemeAR"
+		     	    	/>
+				<WebView 
+				       	android:id="@+id/wvResult5Alt"
+				       	style="@style/FAQAnswerThemeAR"
+				       />
+				<Button 
+		     	    	android:id="@+id/bResult6"
+						style="@style/FAQQuestionButtonThemeAR"
+		     	    	/>
+				<WebView 
+				       	android:id="@+id/wvResult6Alt"
+				       	style="@style/FAQAnswerThemeAR"
+				       />
+				<Button 
+		     	    	android:id="@+id/bResult7"
+						style="@style/FAQQuestionButtonThemeAR"
+		     	    	/>
+				<WebView 
+				       	android:id="@+id/wvResult7Alt"
+				       	style="@style/FAQAnswerThemeAR"
+				       />
+				<Button 
+		     	    	android:id="@+id/bResult8"
+						style="@style/FAQQuestionButtonThemeAR"
+		     	    	/>
+				<WebView 
+				       	android:id="@+id/wvResult8Alt"
+				       	style="@style/FAQAnswerThemeAR"
+				       />
+				<Button 
+		     	    	android:id="@+id/bResult9"
+						style="@style/FAQQuestionButtonThemeAR"
+		     	    	/>
+				<WebView 
+				       	android:id="@+id/wvResult9Alt"
+				       	style="@style/FAQAnswerThemeAR"
+				       />
+				<Button 
+		     	    	android:id="@+id/bResult10"
+						style="@style/FAQQuestionButtonThemeAR"
+		     	    	/>
+				<WebView 
+				       	android:id="@+id/wvResult10Alt"
+				       	style="@style/FAQAnswerThemeAR"
 				       />
  		</LinearLayout>
 	</ScrollView>

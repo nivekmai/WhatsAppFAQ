@@ -60,6 +60,8 @@ public class ReturnSearchActivityAlternate extends Activity {
         
         // Init the button
         final Button noMatchButton = (Button) findViewById(R.id.bNoMatchAlt);
+		Log.i("button", "init");
+
         noMatchButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -95,17 +97,21 @@ public class ReturnSearchActivityAlternate extends Activity {
 				 */
 				Log.i("query",describe);
 				final String result = executeHttpGet("http://www.whatsapp.com/faq/search.php?platform=android&lang="+language+"&query="+describe); 
+				Log.i("result", result);
+				Log.wtf("test", result);
 				progresser.post(new Runnable() {
 					public void run() {
+						Log.wtf("test", "in runnable");
 						progresser.setVisibility(View.GONE);
 						String jsonText = null;
-						if(result == null){
+						if(result == null || result == "[]"){
 							jsonText = "[]";
 						}
 						else{
 							jsonText = result.toString();
 						}
-						//Log.i("jsonText", jsonText);
+						Log.i("jsonText", jsonText);
+						Log.wtf("test", jsonText);
 						JSONArray entries = new JSONArray();
 						try {
 							entries = new JSONArray(jsonText);
@@ -210,7 +216,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 		final WebView answer = (WebView) findViewById(aID); 
 		final Button question = (Button) findViewById(qID);		
 		question.setText(titleString[num]);
-		answer.loadData(resultString[num], "text/html", "UNICODE");
+		answer.loadData(resultString[num], "text/html; charset=UTF-8", null);
 		if(resultString[num] != null){  //Only show buttons if there's stuff to put in them.
 			question.setVisibility(View.VISIBLE);
 		}
@@ -221,13 +227,14 @@ public class ReturnSearchActivityAlternate extends Activity {
 		}
 		question.setOnClickListener(new View.OnClickListener() { 
 			
-			@Override
+			@SuppressLint("NewApi") @Override
 			public void onClick(View v) {
 //				Log.i("question", question.toString());
 //				Log.i("answer", answer.toString());
 				if(answer.getVisibility() == View.GONE){
 					answer.setVisibility(View.VISIBLE);
-					if(language=="ar"){						
+					Log.wtf("language", language);
+					if(language.contains("ar")){						
 						question.setCompoundDrawablesWithIntrinsicBounds(null, null, up, null);
 					}
 					else{						
@@ -236,7 +243,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 				}
 				else{
 					answer.setVisibility(View.GONE);
-					if(language=="ar"){						
+					if(language.contains("ar")){						
 						question.setCompoundDrawablesWithIntrinsicBounds(null, null, down, null);
 					}else{						
 						question.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
@@ -280,6 +287,8 @@ public class ReturnSearchActivityAlternate extends Activity {
     //no point in re-inventing the wheel
     public String executeHttpGet(String inputURL) 
 	{
+		Log.i("in", "httpget");
+		Log.i("url", inputURL);
 	    try {
 	    	URL url = new URL(inputURL); //assumes we will get a valid url, will return null in the catch if invalid
 	    	URLConnection ucon = url.openConnection();
@@ -291,6 +300,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 	    		sb.append(line + "\n");
 	    	}
 	    	is.close();
+	    	Log.i("sb", sb.toString());
 	    	return sb.toString();
 	    }
 	    catch (Exception e) {
