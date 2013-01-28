@@ -100,12 +100,13 @@ public final class R {
     public static final class drawable {
         public static final int actionbar_background=0x7f020000;
         public static final int button_disabled=0x7f020001;
-        public static final int button_double_right_arrow=0x7f020002;
-        public static final int button_down=0x7f020003;
-        public static final int button_up=0x7f020004;
-        public static final int faq_question_button=0x7f020005;
-        public static final int green_bar=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
+        public static final int button_double_left_arrow=0x7f020002;
+        public static final int button_double_right_arrow=0x7f020003;
+        public static final int button_down=0x7f020004;
+        public static final int button_up=0x7f020005;
+        public static final int faq_question_button=0x7f020006;
+        public static final int green_bar=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0000;

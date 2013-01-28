@@ -39,7 +39,7 @@ public class ReturnSearchActivity extends Activity {
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Log.w("launch", "result");
+		//Log.w("launch", "result");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_return_search);
 		
@@ -91,7 +91,7 @@ public class ReturnSearchActivity extends Activity {
 				/*  Currently have to send the language to get any results, the search PHP could be a bit smarter
 				 *  and return results even if it's a different language (but always prefer the language from the search)
 				 */
-				Log.i("query",describe);
+				//Log.i("query",describe);
 				final String result = executeHttpGet("http://www.whatsapp.com/faq/search.php?platform=android&lang="+language+"&query="+describe); 
 				progresser.post(new Runnable() {
 					public void run() {
@@ -103,7 +103,7 @@ public class ReturnSearchActivity extends Activity {
 						else{
 							jsonText = result.toString();
 						}
-						//Log.i("jsonText", jsonText);
+						////Log.i("jsonText", jsonText);
 						JSONArray entries = new JSONArray();
 						try {
 							entries = new JSONArray(jsonText);
@@ -152,7 +152,7 @@ public class ReturnSearchActivity extends Activity {
 			WebView webview3 = (WebView) findViewById(R.id.wvResult3);
 			WebView webview4 = (WebView) findViewById(R.id.wvResult4);
 
-			//Log.i("array", json.toString());
+			////Log.i("array", json.toString());
 			String[] resultString = new String[resultsToLoad];
 			String[] titleString = new String[resultsToLoad];
 			final String[] linkString = new String[resultsToLoad];
@@ -194,7 +194,7 @@ public class ReturnSearchActivity extends Activity {
 				public boolean onTouch(View arg0, MotionEvent event) {
 					if(event.getAction() == MotionEvent.ACTION_UP){
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkString[0]));
-						Log.i("link", linkString[0]);
+						//Log.i("link", linkString[0]);
 						startActivity(browserIntent);
 					}
 					return false;
@@ -206,7 +206,7 @@ public class ReturnSearchActivity extends Activity {
 				public boolean onTouch(View arg0, MotionEvent event) {
 					if(event.getAction() == MotionEvent.ACTION_UP){
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkString[1]));
-						Log.i("Viewed FAQ: ", linkString[1]);
+						//Log.i("Viewed FAQ: ", linkString[1]);
 						startActivity(browserIntent);
 					}
 					return false;
@@ -219,7 +219,7 @@ public class ReturnSearchActivity extends Activity {
 				public boolean onTouch(View arg0, MotionEvent event) {
 					if(event.getAction() == MotionEvent.ACTION_UP){
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkString[2]));
-						Log.i("Viewed FAQ: ", linkString[2]);
+						//Log.i("Viewed FAQ: ", linkString[2]);
 						startActivity(browserIntent);
 					}
 					return false;
@@ -232,7 +232,7 @@ public class ReturnSearchActivity extends Activity {
 				public boolean onTouch(View arg0, MotionEvent event) {
 					if(event.getAction() == MotionEvent.ACTION_UP){
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkString[3]));
-						Log.i("Viewed FAQ: ", linkString[3]);
+						//Log.i("Viewed FAQ: ", linkString[3]);
 						startActivity(browserIntent);
 					}
 					return false;
@@ -245,7 +245,7 @@ public class ReturnSearchActivity extends Activity {
 				public boolean onTouch(View arg0, MotionEvent event) {
 					if(event.getAction() == MotionEvent.ACTION_UP){
 						Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkString[4]));
-						Log.i("Viewed FAQ: ", linkString[4]);
+						//Log.i("Viewed FAQ: ", linkString[4]);
 						startActivity(browserIntent);
 					}
 					return false;

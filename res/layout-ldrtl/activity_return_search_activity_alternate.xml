@@ -24,7 +24,7 @@
  		    android:textAllCaps="true"
  		    android:textColor="#FFFFFF"
  		    android:textSize="18sp"
- 		    android:drawableLeft="@drawable/button_double_right_arrow"
+ 		    android:drawableLeft="@drawable/button_double_left_arrow"
  		    />
  		<TextView 
  		    android:id="@+id/tvTryThisAlt"

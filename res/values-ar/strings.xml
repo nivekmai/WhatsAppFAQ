@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FAQ</string>
-    <string name="menu_settings">Settings</string>
-    <string name="describe_problem_description">Please describe your problem.</string>
-    <string name="done">Done</string>
-    <string name="search_for">Searching for:</string>
-    <string name="title_activity_email">EmailActivity</string>
-    <string name="email_here">Email screen would be here, with your failed search query already written in:</string>
-    <string name="does_not_match_button">This does not answer my question.</string>
-    <string name="try_these_faq">Is this your question?</string>
-    <string name="no_matches">Sorry, it seems there were no FAQ matches for your question. Please send us an email.</string>
-    <string name="more_detail">Please use as much detail as possible. The more you tell us, the faster we can solve your issue.</string>
-    <string name="faq">Have you read our FAQ yet?</string>
-    <string name="contact_us">Contact us</string>
-    <string name="not_long_enough">Sorry, that is not enough information to resolve your issue.</string>
-    <string name="title_activity_return_search_activity_alternate">Contact Us</string>
-    <string name="num_results">Number of results to display</string>
+    <string name="app_name">تعليمات</string>																	
+    <string name="menu_settings">إعدادات</string>																	
+    <string name="describe_problem_description">يرجى وصف مشكلتك.</string>																	
+    <string name="done">القيام به</string>																	
+    <string name="search_for">البحث عن:</string>																	
+    <string name="title_activity_email">EmailActivity</string>																	
+    <string name="email_here">وشاشة إلكترونية أكون هنا، مع استعلام البحث فشلت في كتابة بالفعل:</string>																	
+    <string name="does_not_match_button">هذا لا يجيب على سؤالي.</string>																	
+    <string name="try_these_faq">هذا هو سؤالك؟</string>																	
+    <string name="no_matches">آسف، يبدو انه لا توجد مباريات التعليمات لسؤالك. يرجى مراسلتنا على البريد الإلكتروني.</string>																	
+    <string name="more_detail">كما يرجى استخدام قدر ممكن من التفصيل، وكلما كنت تقول لنا، وإننا قادرون على حل أسرع مشكلتك.</string>																	
+    <string name="faq">هل قراءة الأسئلة الشائعة حتى الآن؟</string>																	
+    <string name="contact_us">الاتصال بنا</string>																	
+    <string name="not_long_enough">آسف، وهذا ليس ما يكفي من المعلومات لحل مشكلتك.</string>																	
+    <string name="title_activity_return_search_activity_alternate">الاتصال بنا</string>																	
+    <string name="num_results">عدد نتائج لعرضها</string>																	
     <string-array name = "numbers">
         <item >1</item>
         <item >2</item>

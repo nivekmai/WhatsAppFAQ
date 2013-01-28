@@ -40,7 +40,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Log.w("launch", "resultAlt");
+		//Log.w("launch", "resultAlt");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_return_search_activity_alternate);
 		
@@ -60,7 +60,7 @@ public class ReturnSearchActivityAlternate extends Activity {
         
         // Init the button
         final Button noMatchButton = (Button) findViewById(R.id.bNoMatchAlt);
-		Log.i("button", "init");
+		//Log.i("button", "init");
 
         noMatchButton.setOnClickListener(new View.OnClickListener() {
 			
@@ -95,13 +95,13 @@ public class ReturnSearchActivityAlternate extends Activity {
 				/*  Currently have to send the language to get any results, the search PHP could be a bit smarter
 				 *  and return results even if it's a different language (but always prefer the language from the search)
 				 */
-				Log.i("query",describe);
+				//Log.i("query",describe);
 				final String result = executeHttpGet("http://www.whatsapp.com/faq/search.php?platform=android&lang="+language+"&query="+describe); 
-				Log.i("result", result);
-				Log.wtf("test", result);
+				//Log.i("result", result);
+				//Log.wtf("test", result);
 				progresser.post(new Runnable() {
 					public void run() {
-						Log.wtf("test", "in runnable");
+						//Log.wtf("test", "in runnable");
 						progresser.setVisibility(View.GONE);
 						String jsonText = null;
 						if(result == null || result == "[]"){
@@ -110,8 +110,8 @@ public class ReturnSearchActivityAlternate extends Activity {
 						else{
 							jsonText = result.toString();
 						}
-						Log.i("jsonText", jsonText);
-						Log.wtf("test", jsonText);
+						//Log.i("jsonText", jsonText);
+						//Log.wtf("test", jsonText);
 						JSONArray entries = new JSONArray();
 						try {
 							entries = new JSONArray(jsonText);
@@ -257,7 +257,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 			public boolean onTouch(View arg0, MotionEvent event) {
 				if(event.getAction() == MotionEvent.ACTION_UP){
 					Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(linkString[num]));
-					Log.i("Viewed FAQ: ", linkString[num]);
+					//Log.i("Viewed FAQ: ", linkString[num]);
 					startActivity(browserIntent);
 				}
 				return false;
@@ -287,8 +287,8 @@ public class ReturnSearchActivityAlternate extends Activity {
     //no point in re-inventing the wheel
     public String executeHttpGet(String inputURL) 
 	{
-		Log.i("in", "httpget");
-		Log.i("url", inputURL);
+		//Log.i("in", "httpget");
+		//Log.i("url", inputURL);
 	    try {
 	    	URL url = new URL(inputURL); //assumes we will get a valid url, will return null in the catch if invalid
 	    	URLConnection ucon = url.openConnection();
@@ -300,7 +300,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 	    		sb.append(line + "\n");
 	    	}
 	    	is.close();
-	    	Log.i("sb", sb.toString());
+	    	//Log.i("sb", sb.toString());
 	    	return sb.toString();
 	    }
 	    catch (Exception e) {
