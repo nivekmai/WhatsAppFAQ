@@ -20,7 +20,7 @@
     <style name="FAQQuestionButtonTheme" parent="@android:style/Widget.Button">
         <item name = "android:textSize">@dimen/faq_button_text_size</item>
         <item name = "android:layout_width">match_parent</item>
-		<item name = "android:layout_height">wrap_content</item>
+		<item name = "android:layout_height">fill_parent</item>
 		<item name = "android:layout_weight">1</item>
 		<item name = "android:drawableLeft">@drawable/button_down</item>
 		<item name = "android:drawablePadding">@dimen/dropdown_padding</item>

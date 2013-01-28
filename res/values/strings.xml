@@ -16,5 +16,18 @@
     <string name="contact_us">Contact us</string>
     <string name="not_long_enough">Sorry, that is not enough information to resolve your issue.</string>
     <string name="title_activity_return_search_activity_alternate">Contact Us</string>
+    <string name="num_results">Number of results to display</string>
+    <string-array name = "numbers">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+        <item >6</item>
+        <item >7</item>
+        <item >8</item>
+        <item >9</item>
+        <item >10</item>
+    </string-array>
 
 </resources>

@@ -96,4 +96,13 @@
         android:layout_below="@+id/linearLayout1"
         android:text="view raw search results" />
 
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/checkBox1"
+        android:layout_below="@+id/checkBox1"
+        android:prompt="@string/num_results"
+        android:entries="@array/numbers" />
+
 </RelativeLayout>

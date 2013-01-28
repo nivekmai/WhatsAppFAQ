@@ -9,23 +9,29 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class SearchActivity extends Activity {
 	
 	public final static String SEARCH_MESSAGE = "com.whatsapp.MESSAGE";
+	public final static String RESULT_COUNT = "com.whatsapp.COUNT";
 	public final String whatsappFAQ = "http://www.whatsapp.com/faq"; //let the server determine the platform/language and redirect to the correct site
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        
 
         //Init the UI components
         final EditText searchBox = (EditText) findViewById(R.id.describe_problem_description_et);
         final Button searchButton = (Button) findViewById(R.id.bDone);
         final Button faqButton = (Button) findViewById(R.id.bdescribe_problem_help);
         final CheckBox checkbox = (CheckBox) findViewById(R.id.checkBox1);
+        final Spinner resultPick = (Spinner) findViewById(R.id.spinner1);
+        
+        resultPick.setSelection(5);
         
         searchButton.setOnClickListener(new View.OnClickListener() {
 			
@@ -40,6 +46,7 @@ public class SearchActivity extends Activity {
 					else{
 						intent = new Intent(SearchActivity.this, ReturnSearchActivityAlternate.class);
 					}
+					intent.putExtra(RESULT_COUNT, resultPick.getSelectedItemPosition());
 					intent.putExtra(SEARCH_MESSAGE, description);
 					startActivity(intent);
 				}

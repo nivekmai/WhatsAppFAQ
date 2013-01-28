@@ -46,7 +46,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 		
 	    final Intent fromIntent = getIntent();
 	    String description = fromIntent.getStringExtra(SearchActivity.SEARCH_MESSAGE);
-	    final int resultsToLoad = 7;
+	    final int resultsToLoad = fromIntent.getIntExtra(SearchActivity.RESULT_COUNT, 5) + 1;
 		
         //Find the language (ideally this would be done somewhere else);
         final String language = Locale.getDefault().getLanguage();
@@ -208,7 +208,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 	
 	public void qaBuilder(final int qID, final int aID, final int num, String[] titleString, String[] resultString, final String[] linkString, final String language, final Drawable up, final Drawable down){ //lol function
 		final WebView answer = (WebView) findViewById(aID); 
-		final Button question = (Button) findViewById(qID);
+		final Button question = (Button) findViewById(qID);		
 		question.setText(titleString[num]);
 		answer.loadData(resultString[num], "text/html", "UNICODE");
 		if(resultString[num] != null){  //Only show buttons if there's stuff to put in them.

@@ -8,6 +8,9 @@
 package com.whatsappfaq;
 
 public final class R {
+    public static final class array {
+        public static final int numbers=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class color {
@@ -99,57 +102,56 @@ public final class R {
         public static final int button_disabled=0x7f020001;
         public static final int button_double_right_arrow=0x7f020002;
         public static final int button_down=0x7f020003;
-        public static final int button_search=0x7f020004;
-        public static final int button_up=0x7f020005;
-        public static final int faq_question_button=0x7f020006;
-        public static final int green_bar=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
-        public static final int orange_button=0x7f020009;
+        public static final int button_up=0x7f020004;
+        public static final int faq_question_button=0x7f020005;
+        public static final int green_bar=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f090000;
-        public static final int actionbar=0x7f090023;
-        public static final int bDone=0x7f090024;
-        public static final int bNoMatch=0x7f090003;
-        public static final int bNoMatchAlt=0x7f09000b;
-        public static final int bResult0=0x7f09000d;
-        public static final int bResult1=0x7f09000f;
-        public static final int bResult10=0x7f090021;
-        public static final int bResult2=0x7f090011;
-        public static final int bResult3=0x7f090013;
-        public static final int bResult4=0x7f090015;
-        public static final int bResult5=0x7f090017;
-        public static final int bResult6=0x7f090019;
-        public static final int bResult7=0x7f09001b;
-        public static final int bResult8=0x7f09001d;
-        public static final int bResult9=0x7f09001f;
-        public static final int bdescribe_problem_help=0x7f090027;
-        public static final int checkBox1=0x7f090028;
-        public static final int describe_problem_description_et=0x7f090026;
-        public static final int linearLayout1=0x7f090025;
-        public static final int menu_settings=0x7f09002a;
-        public static final int pbLoadingResult=0x7f090002;
-        public static final int pbLoadingResultAlt=0x7f09000a;
-        public static final int textView1=0x7f090029;
-        public static final int tvEmailText=0x7f090001;
-        public static final int tvTryThis=0x7f090004;
-        public static final int tvTryThisAlt=0x7f09000c;
-        public static final int wvResult0=0x7f090005;
-        public static final int wvResult0Alt=0x7f09000e;
-        public static final int wvResult1=0x7f090006;
-        public static final int wvResult10Alt=0x7f090022;
-        public static final int wvResult1Alt=0x7f090010;
-        public static final int wvResult2=0x7f090007;
-        public static final int wvResult2Alt=0x7f090012;
-        public static final int wvResult3=0x7f090008;
-        public static final int wvResult3Alt=0x7f090014;
-        public static final int wvResult4=0x7f090009;
-        public static final int wvResult4Alt=0x7f090016;
-        public static final int wvResult5Alt=0x7f090018;
-        public static final int wvResult6Alt=0x7f09001a;
-        public static final int wvResult7Alt=0x7f09001c;
-        public static final int wvResult8Alt=0x7f09001e;
-        public static final int wvResult9Alt=0x7f090020;
+        public static final int LinearLayout1=0x7f0a0000;
+        public static final int actionbar=0x7f0a0023;
+        public static final int bDone=0x7f0a0024;
+        public static final int bNoMatch=0x7f0a0003;
+        public static final int bNoMatchAlt=0x7f0a000b;
+        public static final int bResult0=0x7f0a000d;
+        public static final int bResult1=0x7f0a000f;
+        public static final int bResult10=0x7f0a0021;
+        public static final int bResult2=0x7f0a0011;
+        public static final int bResult3=0x7f0a0013;
+        public static final int bResult4=0x7f0a0015;
+        public static final int bResult5=0x7f0a0017;
+        public static final int bResult6=0x7f0a0019;
+        public static final int bResult7=0x7f0a001b;
+        public static final int bResult8=0x7f0a001d;
+        public static final int bResult9=0x7f0a001f;
+        public static final int bdescribe_problem_help=0x7f0a0027;
+        public static final int checkBox1=0x7f0a0028;
+        public static final int describe_problem_description_et=0x7f0a0026;
+        public static final int linearLayout1=0x7f0a0025;
+        public static final int menu_settings=0x7f0a002b;
+        public static final int pbLoadingResult=0x7f0a0002;
+        public static final int pbLoadingResultAlt=0x7f0a000a;
+        public static final int spinner1=0x7f0a0029;
+        public static final int textView1=0x7f0a002a;
+        public static final int tvEmailText=0x7f0a0001;
+        public static final int tvTryThis=0x7f0a0004;
+        public static final int tvTryThisAlt=0x7f0a000c;
+        public static final int wvResult0=0x7f0a0005;
+        public static final int wvResult0Alt=0x7f0a000e;
+        public static final int wvResult1=0x7f0a0006;
+        public static final int wvResult10Alt=0x7f0a0022;
+        public static final int wvResult1Alt=0x7f0a0010;
+        public static final int wvResult2=0x7f0a0007;
+        public static final int wvResult2Alt=0x7f0a0012;
+        public static final int wvResult3=0x7f0a0008;
+        public static final int wvResult3Alt=0x7f0a0014;
+        public static final int wvResult4=0x7f0a0009;
+        public static final int wvResult4Alt=0x7f0a0016;
+        public static final int wvResult5Alt=0x7f0a0018;
+        public static final int wvResult6Alt=0x7f0a001a;
+        public static final int wvResult7Alt=0x7f0a001c;
+        public static final int wvResult8Alt=0x7f0a001e;
+        public static final int wvResult9Alt=0x7f0a0020;
     }
     public static final class layout {
         public static final int activity_email=0x7f030000;
@@ -158,11 +160,11 @@ public final class R {
         public static final int activity_search=0x7f030003;
     }
     public static final class menu {
-        public static final int activity_email=0x7f080000;
-        public static final int activity_return_search=0x7f080001;
-        public static final int activity_return_search_activity_alternate=0x7f080002;
-        public static final int activity_search=0x7f080003;
-        public static final int activity_testactivity=0x7f080004;
+        public static final int activity_email=0x7f090000;
+        public static final int activity_return_search=0x7f090001;
+        public static final int activity_return_search_activity_alternate=0x7f090002;
+        public static final int activity_search=0x7f090003;
+        public static final int activity_testactivity=0x7f090004;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
@@ -176,6 +178,7 @@ public final class R {
         public static final int more_detail=0x7f06000a;
         public static final int no_matches=0x7f060009;
         public static final int not_long_enough=0x7f06000d;
+        public static final int num_results=0x7f06000f;
         public static final int search_for=0x7f060004;
         public static final int title_activity_email=0x7f060005;
         public static final int title_activity_return_search_activity_alternate=0x7f06000e;
@@ -212,14 +215,14 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
-        public static final int FAQAnswerTheme=0x7f070003;
-        public static final int FAQQuestionButtonTheme=0x7f070002;
+        public static final int AppTheme=0x7f080001;
+        public static final int FAQAnswerTheme=0x7f080003;
+        public static final int FAQQuestionButtonTheme=0x7f080002;
     }
 }
