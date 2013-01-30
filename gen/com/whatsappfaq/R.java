@@ -105,8 +105,9 @@ public final class R {
         public static final int button_down=0x7f020004;
         public static final int button_up=0x7f020005;
         public static final int faq_question_button=0x7f020006;
-        public static final int green_bar=0x7f020007;
-        public static final int ic_launcher=0x7f020008;
+        public static final int faq_question_button_dark=0x7f020007;
+        public static final int green_bar=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0000;
@@ -178,7 +179,8 @@ public final class R {
         public static final int more_detail=0x7f06000a;
         public static final int no_matches=0x7f060009;
         public static final int not_long_enough=0x7f06000d;
-        public static final int num_results=0x7f06000f;
+        public static final int num_results=0x7f060010;
+        public static final int read_more=0x7f06000f;
         public static final int search_for=0x7f060004;
         public static final int title_activity_email=0x7f060005;
         public static final int title_activity_return_search_activity_alternate=0x7f06000e;
@@ -211,9 +213,11 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
-        public static final int FAQAnswerTheme=0x7f080003;
-        public static final int FAQAnswerThemeAR=0x7f080005;
+        public static final int FAQAnswerTheme=0x7f080004;
+        public static final int FAQAnswerThemeAR=0x7f080007;
+        public static final int FAQQuestionButtonDarkTheme=0x7f080003;
+        public static final int FAQQuestionButtonDarkThemeAR=0x7f080006;
         public static final int FAQQuestionButtonTheme=0x7f080002;
-        public static final int FAQQuestionButtonThemeAR=0x7f080004;
+        public static final int FAQQuestionButtonThemeAR=0x7f080005;
     }
 }

@@ -144,8 +144,9 @@ public class ReturnSearchActivityAlternate extends Activity {
 		 * Right now the average query result is <5.
 		 */
 
+		Context context = getApplicationContext();
 		if (json.length() == 0){
-			Context context = getApplicationContext();
+			
 			CharSequence text = context.getString(R.string.no_matches);
 			context.getAssets();
 			int duration = Toast.LENGTH_LONG;
@@ -159,13 +160,18 @@ public class ReturnSearchActivityAlternate extends Activity {
 			String[] resultString = new String[count];
 			String[] titleString = new String[count];
 			final String[] linkString = new String[count];
+			CharSequence readMore = context.getString(R.string.read_more);
 			
 			for(int i = 0; i < json.length() && i < count; i++){
 				JSONObject result = json.optJSONObject(i);
 				try {
 					titleString[i] = result.getString("title").replaceAll("<b>|</b>", "");
 					titleString[i] = titleString[i].replaceAll("&#39;", "'");
-					resultString[i] = "<body bgColor=\"e4eeee\"><font face=\"roboto light, roboto thin, roboto regular, roboto\"><color=\"#7c7c7c\">" + result.getString("description") + "<font></body>";
+					if(i % 2 != 0){
+						resultString[i] = "<font face=\"roboto light, roboto thin, roboto regular, roboto\"><color=\"#7c7c7c\"><body bgColor=\"#ededed\">" + result.getString("description") + "<br/><p style=\"font-size:10px;float:right;color:888888\">" + readMore + "</p></body><font>";
+					}else{
+						resultString[i] = "<font face=\"roboto light, roboto thin, roboto regular, roboto\"><color=\"#7c7c7c\">" + result.getString("description") + "<br/><p style=\"font-size:10px;float:right;color:888888\">" + readMore + "</p><font>";
+					}
 					linkString[i] = result.getString("url");
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
