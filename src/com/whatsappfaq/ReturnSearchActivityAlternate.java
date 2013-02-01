@@ -161,7 +161,6 @@ public class ReturnSearchActivityAlternate extends Activity {
 			String[] titleString = new String[count];
 			final String[] linkString = new String[count];
 			CharSequence readMore = context.getString(R.string.read_more);
-			
 			for(int i = 0; i < json.length() && i < count; i++){
 				JSONObject result = json.optJSONObject(i);
 				try {
