@@ -96,7 +96,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 				 *  and return results even if it's a different language (but always prefer the language from the search)
 				 */
 				//Log.i("query",describe);
-				final String result = executeHttpGet("http://www.whatsapp.com/faq/search.php?platform=android&lang="+language+"&query="+describe); 
+				final String result = executeHttpGet("http://beta.whatsapp.com/faq/client_search.php?lg=en&lc=us&platform=android&query="+describe); 
 				//Log.i("result", result);
 				//Log.wtf("test", result);
 				progresser.post(new Runnable() {
@@ -160,23 +160,21 @@ public class ReturnSearchActivityAlternate extends Activity {
 			String[] resultString = new String[count];
 			String[] titleString = new String[count];
 			final String[] linkString = new String[count];
-			CharSequence readMore = context.getString(R.string.read_more);
+			//CharSequence readMore = context.getString(R.string.read_more);
 			for(int i = 0; i < json.length() && i < count; i++){
 				JSONObject result = json.optJSONObject(i);
 				try {
 					titleString[i] = result.getString("title").replaceAll("<b>|</b>", "");
 					titleString[i] = titleString[i].replaceAll("&#39;", "'");
-					if(i % 2 != 0){
-						resultString[i] = "<font face=\"roboto light, roboto thin, roboto regular, roboto\"><color=\"#7c7c7c\"><body bgColor=\"#ededed\">" + result.getString("description") + "<br/><p style=\"font-size:10px;float:right;color:888888\">" + readMore + "</p></body><font>";
-					}else{
-						resultString[i] = "<font face=\"roboto light, roboto thin, roboto regular, roboto\"><color=\"#7c7c7c\">" + result.getString("description") + "<br/><p style=\"font-size:10px;float:right;color:888888\">" + readMore + "</p><font>";
-					}
+					resultString[i] = result.getString("description");
 					linkString[i] = result.getString("url");
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			}						
+			}
+			//tester result just to see what stuff looks like
+			//resultString[0] = "<head><link rel=\"stylesheet\" href=\"http://www.whatsapp.com/css/style.m.css.php?pfm=android\" type=\"text/css\" charset\"utf-8\"></head><div class=\"content inner \"> <div class=\"container faq-entry\"><div class=\"entry-body\"><p>If your friend does not appear in the WhatsApp Contacts list, we recommend the following steps:</p><ul><li>Make sure that you have your friend's phone number in your address book</li><li>Ensure that your friend is using WhatsApp Messenger</li><li>Make sure that you have the latest version of WhatsApp. You can download it <a href=\"http://www.whatsapp.com/download\" target=\"_blank\">here</a>&nbsp;</li><li>In your Android phone book, make sure that all contact accounts (i.e. SIM, Google, Phone) are \"visible\" or \"viewable\"</li><li>In your Android phone book, ensure that all contact groups (i.e. Friends, Family) are \"visible\" or \"viewable\"</li><li>We recommend that you make your contacts \"not visible\" and then \"visible\" to force a refresh. After doing this launch WhatsApp &gt; pencil icon&nbsp;&gt; <a href=\"http://www.whatsapp.com/faq/en/android/21228643\">[Menu Button]</a>&nbsp;&gt; Refresh<br />&nbsp;</li></ul><p>Alternatively, you can use all your contacts, not just the \"visible\" ones. To do this:</p><ol><li>Go to the Contacts Help screen:&nbsp;</li><ul><li><span style=\";\">From the main Chats screen, tap the pencil icon&nbsp;&gt; <a href=\"http://www.whatsapp.com/faq/en/android/21228643\">[Menu Button]</a>&nbsp;&gt; Help</span></li></ul><li>Scroll down and tap the \"Show Invisible Contacts\" button</li><li>If you have any invisible contacts, a checkbox will appear. Make sure that it is checked.</li></ol><p><img src=\"http://whatsapp.zendesk.com/attachments/token/iup7ziriolkg9ez/?name=invisible_contacts1_en.png\" alt=\"invisible_contacts1_en.png\" />&nbsp; &nbsp; &nbsp;&nbsp;<img src=\"http://whatsapp.zendesk.com/attachments/token/vijwrpofcbypbpk/?name=invisible_contacts2_en.png\" alt=\"invisible_contacts2_en.png\" /></p><p>Cheers,<br /><strong style=\";\">WhatsApp Support Team</strong></p>";
 			final Drawable down = getResources().getDrawable(R.drawable.button_down);			
 			final Drawable up = getResources().getDrawable(R.drawable.button_up);
 			
@@ -197,7 +195,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 	        		R.id.bResult10,
 	        };
 	        
-	        int[] results = {
+	        int[] resultList = {
 	        		R.id.wvResult0Alt,
 	        		R.id.wvResult1Alt,
 	        		R.id.wvResult2Alt,
@@ -212,7 +210,7 @@ public class ReturnSearchActivityAlternate extends Activity {
 	        };
 	        
 	        for(int i = 0; i < count; i++){
-	        	qaBuilder(questions[i], results[i], i, titleString, resultString, linkString, language, up, down); 
+	        	qaBuilder(questions[i], resultList[i], i, titleString, resultString, linkString, language, up, down); 
 	        }
 		}		
 	}
