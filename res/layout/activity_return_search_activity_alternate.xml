@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     tools:context=".ReturnSearch" 
     android:orientation="vertical"
+    android:background="#f9f9f9"
     >
    		<ProgressBar
 	        android:id="@+id/pbLoadingResultAlt"
@@ -26,29 +27,16 @@
  		    android:textSize="18sp"
  		    android:drawableRight="@drawable/button_double_right_arrow"
  		    />
- 		<TextView 
- 		    android:id="@+id/tvTryThisAlt"
- 		    android:layout_width="wrap_content"
- 		    android:layout_height="wrap_content"
- 		    android:layout_alignParentLeft="true"
- 		    android:layout_alignParentRight="true"
- 		    android:layout_alignParentTop="true"
- 		    android:text="@string/try_these_faq"
- 		    android:textSize="20sp"
- 		    android:padding="15dp"
- 		    android:gravity="center"
- 		    android:fontFamily="roboto regular, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif"
- 		    android:textAllCaps="true"
- 		    android:textColor="#6F6F6F"
- 		    />
+
 
  		<ScrollView
+ 		    android:id="@+id/svList"
  		    android:layout_width="match_parent"
  		    android:layout_height="wrap_content"
  		    android:layout_above="@id/bNoMatchAlt"
- 		    android:layout_below="@id/tvTryThisAlt"
  		    android:layout_alignParentLeft="true"
  		    android:layout_alignParentRight="true"
+ 		    android:layout_alignParentTop="true"
  		    >
 
 			<LinearLayout
@@ -56,6 +44,19 @@
 		      android:layout_height="wrap_content"
 		      android:orientation="vertical"
 		      >
+		      
+	     		<TextView 
+			 		    android:id="@+id/tvTryThisAlt"
+			 		    android:layout_width="fill_parent"
+			 		    android:layout_height="wrap_content"
+			 		    android:text="@string/try_these_faq"
+			 		    android:textSize="20sp"
+			 		    android:padding="15dp"
+			 		    android:gravity="center"
+			 		    android:fontFamily="roboto regular, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif"
+			 		    android:textAllCaps="true"
+			 		    android:textColor="#6F6F6F"
+	 		    		/>
 		     	<Button 
 		     	    	android:id="@+id/bResult0"
 		     	    	style="@style/FAQQuestionButtonTheme"

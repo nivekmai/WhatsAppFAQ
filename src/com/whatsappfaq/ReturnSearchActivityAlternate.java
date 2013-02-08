@@ -17,6 +17,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Build;
@@ -29,6 +30,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 public class ReturnSearchActivityAlternate extends Activity {
@@ -215,11 +217,13 @@ public class ReturnSearchActivityAlternate extends Activity {
 		}		
 	}
 	
-	public void qaBuilder(final int qID, final int aID, final int num, String[] titleString, String[] resultString, final String[] linkString, final String language, final Drawable up, final Drawable down){ //lol function
+	public void qaBuilder(final int qID, final int aID, final int num, String[] titleString, final String[] resultString, final String[] linkString, final String language, final Drawable up, final Drawable down){ //lol function
 		final WebView answer = (WebView) findViewById(aID); 
-		final Button question = (Button) findViewById(qID);		
+		final Button question = (Button) findViewById(qID);
+		question.setVisibility(View.GONE);
+		//answer.setBackgroundColor(Color.argb(1, 0, 0, 0));
+		//answer.setDrawingCacheBackgroundColor(Color.parseColor("#f9f9f9"));
 		question.setText(titleString[num]);
-		answer.loadData(resultString[num], "text/html; charset=UTF-8", null);
 		if(resultString[num] != null){  //Only show buttons if there's stuff to put in them.
 			question.setVisibility(View.VISIBLE);
 		}
@@ -229,27 +233,27 @@ public class ReturnSearchActivityAlternate extends Activity {
 			linkString[num] = "#";
 		}
 		question.setOnClickListener(new View.OnClickListener() { 
-			
 			@SuppressLint("NewApi") @Override
 			public void onClick(View v) {
 //				Log.i("question", question.toString());
 //				Log.i("answer", answer.toString());
+				answer.loadData(resultString[num], "text/html; charset=UTF-8", null);
 				if(answer.getVisibility() == View.GONE){
 					answer.setVisibility(View.VISIBLE);
 					Log.wtf("language", language);
 					if(language.contains("ar")){						
-						question.setCompoundDrawablesWithIntrinsicBounds(null, null, up, null);
+						question.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
 					}
 					else{						
-						question.setCompoundDrawablesWithIntrinsicBounds(up, null, null, null);
+						question.setCompoundDrawablesWithIntrinsicBounds(null, null, up, null);
 					}
 				}
 				else{
 					answer.setVisibility(View.GONE);
 					if(language.contains("ar")){						
-						question.setCompoundDrawablesWithIntrinsicBounds(null, null, down, null);
-					}else{						
 						question.setCompoundDrawablesWithIntrinsicBounds(down, null, null, null);
+					}else{						
+						question.setCompoundDrawablesWithIntrinsicBounds(null, null, down, null);
 					}
 				}
 			}
